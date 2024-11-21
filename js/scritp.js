@@ -10,3 +10,27 @@ const temaActual = ()=>{
     document.querySelector("body").getAttribute("data-bs-theme") === "light"?
     temaOscuro() : temaClaro();
 }
+
+// Mostrar letras al cargar la pagina
+
+document.addEventListener("DOMContentLoaded", function() {
+    const paragraph = document.querySelector(".fade-in");
+    const paragraph2 = document.querySelector(".welcome");
+    const texto = document.querySelector('.sobre_mi .text-bg-secondary');
+    const text = document.querySelector(".scroll-text");
+    
+    texto.classList.add("visible3");
+    paragraph2.classList.add("visible2");
+    paragraph.classList.add("visible");
+
+    window.addEventListener("scroll", function() {
+        const textPosition = text.getBoundingClientRect().top;
+        const screenPosition = window.innerHeight / 1.3;
+
+        if (textPosition < screenPosition) {
+            text.classList.add("visible4");
+        }
+    });
+});
+
+// Fin del evento

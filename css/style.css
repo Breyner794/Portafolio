@@ -1,6 +1,59 @@
 .inicio{
     text-align: center;
+    font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
 }
+
 .welcome{
-    padding-top: 15px;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+    padding-top: 40px;
+}
+.welcome.visible2 {
+    opacity: 1;
+}
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 4s ease-in-out;
+}
+.fade-in.visible {
+    opacity: 1;
+}
+
+.sobre_mi .text-bg-secondary{
+    opacity: 0;
+    transition: opacity 6s ease-in-out;
+}
+.sobre_mi .text-bg-secondary.visible3 {
+    opacity: 1;
+}
+.scroll-text {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.scroll-text.visible4 {
+    opacity: 1;
+}
+
+.info-basic {
+    display: flex;
+    align-items: center; /* Alinea verticalmente al centro */
+    justify-content: center; /* Alinea horizontalmente al centro */
+    text-align: left;/* Alinea el texto a la izquierda */
+}
+.info-basic img {
+    max-width: 50%; /* Ajusta el tamaño de la imagen según sea necesario */
+    height: auto;
+    margin-right: 10px; /* Espacio entre la imagen y el texto */
+}
+.text-container {
+    display: flex;
+    flex-direction: column; /* Alinea los párrafos verticalmente */
+}
+.info-basic p {
+    margin: 0; /* Elimina el margen por defecto del párrafo */
+}
+.info-basic h1{
+    margin-bottom: 50px;
 }
