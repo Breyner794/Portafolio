@@ -18,6 +18,9 @@ document.addEventListener("DOMContentLoaded", function() {
     const paragraph2 = document.querySelector(".welcome");
     const texto = document.querySelector('.sobre_mi .text-bg-secondary');
     const text = document.querySelector(".scroll-text");
+    const image = document.querySelector(".imagen-transicion");
+    const subtitulo = document.querySelector(".subtitulo-transicion");
+    const titulo = document.querySelector(".sobre_mi");
     
     texto.classList.add("visible3");
     paragraph2.classList.add("visible2");
@@ -29,6 +32,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
         if (textPosition < screenPosition) {
             text.classList.add("visible4");
+            image.classList.add("mover");
+            titulo.classList.add("visible");
+            subtitulo.classList.add("visible");
         }
     });
 });

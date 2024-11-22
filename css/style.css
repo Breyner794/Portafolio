@@ -7,6 +7,8 @@
     opacity: 0;
     transition: opacity 2s ease-in-out;
     padding-top: 40px;
+    font-family: 'Doto';
+    font-size: 90px
 }
 .welcome.visible2 {
     opacity: 1;
@@ -15,6 +17,10 @@
 .fade-in {
     opacity: 0;
     transition: opacity 4s ease-in-out;
+    font-family: 'Nixie One';
+    font-size: 3ch;
+    color:rgb(0, 0, 0);
+    
 }
 .fade-in.visible {
     opacity: 1;
@@ -29,11 +35,31 @@
 }
 .scroll-text {
     opacity: 0;
-    transition: opacity 1s ease-in-out;
+    transition: opacity 3s ease-in-out; transition: opacity 3s ease-in-out, transform 3s ease-in-out;
+    transform: translateY(20px);
 }
-
 .scroll-text.visible4 {
     opacity: 1;
+    transform: translateY(0);
+    font-size:2.5ch;
+}
+.imagen-transicion {
+    opacity: 0;
+    transition: opacity 2s ease-in-out, transform 2s ease-in-out;
+}
+.imagen-transicion.mover{
+    opacity: 1;
+    transform: translateX(-20px); /* Ajusta este valor según sea necesario */
+}
+.subtitulo-transicion, .sobre_mi{    /* .titulo-transicion,  */
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 2s ease-in-out, transform 2s ease-in-out;
+}
+
+.subtitulo-transicion.visible, .sobre_mi.visible { /*.titulo-transicion.visible, */
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .info-basic {
@@ -55,5 +81,10 @@
     margin: 0; /* Elimina el margen por defecto del párrafo */
 }
 .info-basic h1{
-    margin-bottom: 50px;
+    margin-bottom: 10px;
 }
+.nav-item{
+    font-size: 20px;
+    color: black;
+}
+
