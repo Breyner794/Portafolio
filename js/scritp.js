@@ -40,3 +40,22 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 // Fin del evento
+
+var scrollSpy = new bootstrap.ScrollSpy(document.body, {
+    target: '#simple-list-example'
+  });
+  document.querySelectorAll('#nav-tab>[data-bs-toggle="tab"]').forEach(el => {
+    el.addEventListener('shown.bs.tab', () => {
+      const target = el.getAttribute('data-bs-target')
+      const scrollElem = document.querySelector(`${target} [data-bs-spy="scroll"]`)
+      bootstrap.ScrollSpy.getOrCreateInstance(scrollElem).refresh()
+    })
+  })
+  document.addEventListener('DOMContentLoaded', function () {
+    const popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
+    const popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+    return new bootstrap.Popover(popoverTriggerEl);
+        });
+    });
+    
+         
