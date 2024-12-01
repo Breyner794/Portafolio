@@ -24,20 +24,20 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nixie+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <title>Mi Primer Portafolio</title>
+    <link rel="icon" href="/img/idea.png" type="image/png">
 </head>
-<body data-bs-theme="light">
+<body>
 
     <!-- INICIO DE LA BARRA -->
 
       <nav class="navbar navbar-expand-lg bg-body-tertiary w-100">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">
-            <img src="img/image (1).png" alt="Logo" width="100" height="100" class="d-inline-block align-text-center">
+            <img src="img/trabajando.png" alt="Logo" width="100" height="100" class="d-inline-block align-text-center">
             Mi Primer Portafolio
           </a>
-
-          <button onclick="temaActual()" class="btn rounded-fill"><i id="dl-icon" class="bi bi-moon-fill"></i></button>
 
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -45,7 +45,7 @@
 
           <ul class="nav collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#sobre_mi">Sobre mi</a>
+              <a class="nav-link" href="#sobre_mi">Sobre mi</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#laboral">Experiencia Laboral</a>
@@ -55,9 +55,6 @@
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#habilidades_contenedor">Habilidades</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Contactos</a>
             </li>
           </ul>
         </div>
@@ -71,12 +68,12 @@
         <h2 class="welcome">Bienvenido</h2>
         <h5 class="fade-in"><p>Tienes que aprender a aprovechar la tecnología para poder usarla para cosas <br> sin estar desconectado de la naturaleza. -Talib Kweli.</p></h5>
     </section>
-    <section class="info-basic w-100">
-      <img src="img/image (3).png" alt="Imagen_breyner" class="imagen-transicion">
+    <section class="info-basic w-100" id="sobre_mi">
+      <img src="img/presentando.png" alt="Imagen_breyner" class="imagen-transicion">
       <div class="texto-container">
-        <h1 class="sobre_mi">Sobre <span class="badge text-bg-secondary">Mi</span></h1>
+        <h1 class="sobre_mi" >Sobre <span class="badge text-bg-secondary">Mi</span></h1>
         <h4 class="subtitulo-transicion">Breyner Farid Quilindo</h4>
-        <p class="scroll-text">Soy tecnólogo en sistemas especializado en soporte técnico y mantenimiento de equipos.<br> Trabajo en la mesa de ayuda, resolviendo problemas y verificando redes.<br> Con entusiasmo, estoy comenzando en la programación.<br> Soy colaborador, apasionado por el conocimiento y siempre busco retos para superar mis capacidades.<br> Amable, amigable y empático, me esfuerzo por comprender y ayudar a los demás, afrontando y corrigiendo mis errores.</p>
+        <p class="scroll-text">Soy tecnólogo en sistemas especializado en soporte técnico y mantenimiento de equipos. Trabajo en la mesa de ayuda, resolviendo problemas y verificando redes. Con entusiasmo, estoy comenzando en la programación. Soy colaborador, apasionado por el conocimiento y siempre busco retos para superar mis capacidades. Amable, amigable y empático, me esfuerzo por comprender y ayudar a los demás, afrontando y corrigiendo mis errores. En proceso para ser un futuro programador, perseverante que siempre está dispuesto a aprender nuevas cosas, y emocionado por empezar una nueva etapa.</p>
       </div>
     </section>
 
@@ -87,7 +84,7 @@
   <section class="titulo_experiencia">
 
     <h1 id="laboral">Experiencia Laboral</h1>
-    <img src="img/image (7).png" alt="breyner_corazon">
+    <img src="img/corazon.png" alt="breyner_corazon">
     <p>Estoy profundamente agradecido con cada una de las empresas en las que he tenido la oportunidad de trabajar.<br>Lo que aprendí en cada una de ellas me formó de muchas maneras, permitiéndome mostrar de lo que soy capaz.<br> Gracias a estas experiencias, he crecido profesional y personalmente. Si no hubiera estado allí, no sabría qué sería de mi vida hoy en día.<br> ¡Gracias por darme la oportunidad de descubrir y desarrollar mi potencial!</p>
 
   </section>
@@ -95,6 +92,7 @@
   <!-- incio experiencia laborales -->
 
     <div class="card-group tarjeta_experience">
+      
       <div class="card">
         <img src="/img/Logo-ATM.webp" class="card-img-top automundial_logo" alt="...">
         <div class="card-body">
@@ -155,9 +153,11 @@
 
     <!-- incio Mi historia -->
 
-    <h1 class="historia" id="lineat">Linea del tiempo</h1>
+    
 
     <div class="row g-0 bg-body-secondary position-relative">
+
+      <h1 class="historia" id="lineat">Linea del tiempo</h1>
       
         <div class="contenedor_historia">
           <h1 class="mt-0 conoceme_historia">Conoce mi <span class="badge text-bg-secondary">PROGRESO</span></h1>
@@ -250,46 +250,9 @@
       </div>
     </div>
 
- 
-
-  <!-- Modal -->
-  <div class="modal fade bounce-modal" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg"> <!-- Aquí puedes usar modal-lg para un modal más grande -->
-      <div class="modal-content custom-modal-content contenedor_historia_c">
-        <div class="modal-header titulo_ventana">
-          <h5 class="modal-title" id="exampleModalLabel">Mi Historia</h5>
-        </div>
-        <div class="modal-body">
-          <p>
-            Mi interés por la tecnología comenzó con mi primer computador y la programación de juegos de Facebook.
-          </p>
-          <p>
-            En <a href="#data" data-bs-toggle="popover" title="Estudios" data-bs-content="Estudié mantenimiento de equipos en el grado 10° y me gradué en 2018.">2018</a>, me gradué en mantenimiento de equipos y comencé la carrera de Tecnología en Sistemas en 2019.
-          </p>
-          <p>
-            En <a href="#data" data-bs-toggle="popover" title="Prácticas" data-bs-content="Realicé prácticas en Price Travel, combinando estudios y trabajo en Grupo Éxito.">2021</a>, hice prácticas en Price Travel, adquiriendo experiencia en soporte técnico y redes.
-          </p>
-          <p>
-            En <a href="#data" data-bs-toggle="popover" title="Automundial" data-bs-content="Fui contratado por Automundial en diciembre de 2022, manejando la infraestructura de la regional occidente.">diciembre de 2022</a>, fui contratado por Automundial, donde manejo la infraestructura de la regional occidente.
-          </p>
-          <p>
-            Todas estas experiencias me han formado y sigo aprendiendo cada día para alcanzar mi meta de ser programador.
-          </p>
-          
-          
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Fin Mi historia -->
-
 
   <section class="skills-section">
-    <h1 class="habilidades" id="habilidades_contenedor">Mis Habilidades</h1>
+    <h1 class="habilidades" id="habilidades_contenedor">Habilidades</h1>
     <div class="skills-container">
         <div class="skill">
             <h2>Programación</h2>
@@ -329,6 +292,14 @@
       </div>
     </div>
 </section>
+
+<div class="contact-bubble" onclick="toggleContactOptions()"><i class="bi bi-chat-square-dots"></i></div>
+    <div class="contact-options" id="contactOptions">
+        <a href="https://github.com/Breyner794" target="_blank"><i class="fab fa-github"></i>GitHub</a>
+        <a href="https://www.linkedin.com/in/breyner-f-quilindo/" target="_blank"><i class="fab fa-linkedin"></i>LinkedIn</a>
+        <a href="mailto:jhoanquilindo@gmail.com"><i class="fas fa-envelope"></i>Correo Electrónico</a>
+        <a href="https://wa.me/573158403781" target="_blank"><i class="fab fa-whatsapp"></i>WhatsApp</a>
+    </div>
 
 </body>
 </html>

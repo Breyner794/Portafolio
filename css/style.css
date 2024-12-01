@@ -1,12 +1,13 @@
 .inicio{
     text-align: center;
     font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
 
 .welcome{
     opacity: 0;
     transition: opacity 2s ease-in-out;
-    padding-top: 40px;
     font-family: 'Doto';
     font-size: 90px
 }
@@ -67,6 +68,7 @@
     align-items: center; /* Alinea verticalmente al centro */
     justify-content: center; /* Alinea horizontalmente al centro */
     text-align: left;/* Alinea el texto a la izquierda */
+    padding-bottom: 70px;
 }
 .info-basic img {
     max-width: 50%; /* Ajusta el tamaño de la imagen según sea necesario */
@@ -105,12 +107,19 @@
     padding: 20px;
 }
 .titulo_experiencia{
-    padding-top: 50px;
-    text-align: center; 
+    padding-top: 10px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 3s ease-out, transform 4s ease-out;
 }
-.titulo_experiencia h1{
+.titulo_experiencia.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+.titulo_experiencia h1 {
     font-size: 90px;
-    font-family: 'Doto';
+    font-family: 'Doto';  
 }
 .titulo_experiencia p{
     padding-top: 20px;
@@ -119,22 +128,23 @@
 }
 .historia{
     text-align: center;
-    margin-top: 100px;
-    margin-bottom: 50px;
+    background-color: #f0f0f0;
+    color: #333333;
+    margin: 0px;
     font-family: 'Doto';
     font-size: 90px;
+    
 }
 .imagen_brey{
     display: flex;
     justify-content: center;
     align-items: center;   
 }
-.breyner_saludando {
-    width: 100%; /* Ajusta el ancho al 100% del contenedor */
-    height: auto; /* Mantiene la proporción de la imagen */
-}
+
 .contenedor_historia{
-    font-size:2.5ch; /* tamaño de la letra dentro de los tiempos */
+    font-size:2.5ch;
+    background-color: #f0f0f0;
+    color: #333333;
 }
 .conoceme_historia{
     text-align: center;
@@ -163,7 +173,7 @@
 .scrollspy-example {
     position: relative;
     width: 350px;
-    height: 350px; /* Ajusta la altura según tus necesidades */
+    height: 350px; 
     overflow-y: scroll;
     padding: 3rem;
     border: 1px solid #ddd;
@@ -173,7 +183,7 @@
     list-style-type: none;
   }
   .simple-list-example-scrollspy .active {
-    background-color: #000000; /* Color de fondo para el enlace activo */
+    background-color: #000000; 
     color: white; /* Color del texto para el enlace activo */
   }
 
@@ -222,12 +232,11 @@
  
 
 
-  * {
+* {
     box-sizing: border-box;
 }
 
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     overflow-x: hidden; /* Evita el desbordamiento horizontal */
@@ -260,7 +269,8 @@ body {
 
 .content {
     padding: 20px 30px;
-    background-color: #fcb077f2;
+    background-color: #ffffff;
+    color: #333333;
     position: relative;
     border-radius: 6px;
     overflow: hidden; /* Asegura que el contenido no se desborde */
@@ -281,8 +291,8 @@ body {
     width: 25px;
     height: 25px;
     right: -19px;
-    background-color: white;
-    border: 4px solid #FF9F55;
+    background-color: rgba(255, 255, 255, 0.147);
+    border: 4px solid #5d5d5d;
     top: 15px;
     border-radius: 50%;
     z-index: 1;
@@ -301,10 +311,13 @@ body {
     transform: translateY(0); /* Posición original */
 }
 
+
+
 .skills-section {
     text-align: center;
     padding: 50px 0;
-    background-color: #fff;
+    background-color: #f0f0f0;
+    color: #333333;
 }
 
 .skills-container {
@@ -313,10 +326,12 @@ body {
     justify-content: center;
     gap: 20px;
     padding: 0px;
+    
 }
 
 .skill {
-    background-color: #e0e0e0;
+    background-color: #ffffff;
+    color: #333333;
     border-radius: 10px;
     padding: 20px;
     width: 250px;
@@ -335,8 +350,81 @@ body {
 }
 .habilidades{
         text-align: center;
-        margin-top: 100px;
-        margin-bottom: 50px;
+        margin-bottom: 100px;
         font-family: 'Doto';
         font-size: 90px;
+}
+
+.contact-bubble {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #868686;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+.contact-bubble:hover {
+    background-color: rgb(96, 145, 199);
+}
+.contact-options {
+    display: none;
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    text-align: center;
+}
+.contact-options a {
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+    text-decoration: none;
+    color: #2963a0;
+    border-radius: 5px;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    transform: translateY(20px);
+}
+.contact-options a:hover {
+    background-color: #f4f4f4;
+}
+.contact-options a i {
+    margin-right: 8px;
+}
+.contact-options.show a {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.navbar .nav-link {
+    color: #333333; /* Color del enlace normal */
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+    color:  rgb(96, 145, 199) !important; /* Color del enlace al pasar el cursor */
+}
+
+.navbar .nav-link:active {
+    color: #0056b3 ; /* Color del enlace activo */
+}
+
+.navbar .nav-link:visited {
+    color: #6c757d; /* Color del enlace visitado */
+}
+
+/* Colores para el enlace activo */
+.navbar .nav-link.active {
+    color: #0056b3; /* Color del enlace activo */
 }

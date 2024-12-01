@@ -1,15 +1,15 @@
-const temaOscuro = ()=>{
-    document.querySelector("body").setAttribute("data-bs-theme", "dark");
-    document.querySelector("#dl-icon").setAttribute("class", "bi bi-sun-fill");
-}
-const temaClaro = ()=>{
-    document.querySelector("body").setAttribute("data-bs-theme", "light");
-    document.querySelector("#dl-icon").setAttribute("class", "bi bi-moon-fill");
-}
-const temaActual = ()=>{
-    document.querySelector("body").getAttribute("data-bs-theme") === "light"?
-    temaOscuro() : temaClaro();
-}
+// const temaOscuro = ()=>{
+//     document.querySelector("body").setAttribute("data-bs-theme", "dark");
+//     document.querySelector("#dl-icon").setAttribute("class", "bi bi-sun-fill");
+// }
+// const temaClaro = ()=>{
+//     document.querySelector("body").setAttribute("data-bs-theme", "light");
+//     document.querySelector("#dl-icon").setAttribute("class", "bi bi-moon-fill");
+// }
+// const temaActual = ()=>{
+//     document.querySelector("body").getAttribute("data-bs-theme") === "light"?
+//     temaOscuro() : temaClaro();
+// }
 
 // Mostrar letras al cargar la pagina
 
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const containers = document.querySelectorAll(".container");
     const skills = document.querySelectorAll(".skill");
     const triggerBottom = window.innerHeight / 5 * 4;
-    
+    const experienciaSection = document.querySelector(".titulo_experiencia");
     
     texto.classList.add("visible3");
     paragraph2.classList.add("visible2");
@@ -33,10 +33,15 @@ document.addEventListener("DOMContentLoaded", function() {
     window.addEventListener("scroll", function() {
         const textPosition = text.getBoundingClientRect().top;
         const screenPosition = window.innerHeight / 1.3;
+        const experienciaTop = experienciaSection.getBoundingClientRect().top;
+
+        if (experienciaTop < screenPosition) {
+            experienciaSection.classList.add("visible");
+            console.log('Added visible to experienciaSection');
+        }
 
         skills.forEach(skill => {
             const skillTop = skill.getBoundingClientRect().top;
-    
             if (skillTop < triggerBottom) {
                 skill.classList.add("show");
             } else {
@@ -45,11 +50,13 @@ document.addEventListener("DOMContentLoaded", function() {
         });
         containers.forEach(container => {
             const containerTop = container.getBoundingClientRect().top;
-    
+            
             if (containerTop < triggerBottom) {
                 container.classList.add("show");
+                
             } else {
                 container.classList.remove("show");
+                
             }
         });
 
@@ -64,23 +71,21 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // Fin del evento
 
-// var scrollSpy = new bootstrap.ScrollSpy(document.body, {
-//     target: '#simple-list-example'
-//   });
-//   document.querySelectorAll('#nav-tab>[data-bs-toggle="tab"]').forEach(el => {
-//     el.addEventListener('shown.bs.tab', () => {
-//       const target = el.getAttribute('data-bs-target')
-//       const scrollElem = document.querySelector(`${target} [data-bs-spy="scroll"]`)
-//       bootstrap.ScrollSpy.getOrCreateInstance(scrollElem).refresh()
-//     })
-//   })
-//   document.addEventListener('DOMContentLoaded', function () {
-//     const popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
-//     const popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
-//     return new bootstrap.Popover(popoverTriggerEl);
-//         });
-//     });
 
-
+function toggleContactOptions() {
+    const contactOptions = document.getElementById('contactOptions');
+    const links = contactOptions.querySelectorAll('a');
+    if (contactOptions.style.display === 'none' || contactOptions.style.display === '') {
+        contactOptions.style.display = 'block';
+        setTimeout(() => {
+            contactOptions.classList.add('show');
+        }, 10);
+    } else {
+        contactOptions.classList.remove('show');
+        setTimeout(() => {
+            contactOptions.style.display = 'none';
+        }, 100);
+    }
+}
    
          
