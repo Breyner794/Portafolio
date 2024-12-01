@@ -21,6 +21,10 @@ document.addEventListener("DOMContentLoaded", function() {
     const image = document.querySelector(".imagen-transicion");
     const subtitulo = document.querySelector(".subtitulo-transicion");
     const titulo = document.querySelector(".sobre_mi");
+    const containers = document.querySelectorAll(".container");
+    const skills = document.querySelectorAll(".skill");
+    const triggerBottom = window.innerHeight / 5 * 4;
+    
     
     texto.classList.add("visible3");
     paragraph2.classList.add("visible2");
@@ -29,6 +33,25 @@ document.addEventListener("DOMContentLoaded", function() {
     window.addEventListener("scroll", function() {
         const textPosition = text.getBoundingClientRect().top;
         const screenPosition = window.innerHeight / 1.3;
+
+        skills.forEach(skill => {
+            const skillTop = skill.getBoundingClientRect().top;
+    
+            if (skillTop < triggerBottom) {
+                skill.classList.add("show");
+            } else {
+                skill.classList.remove("show");
+            }
+        });
+        containers.forEach(container => {
+            const containerTop = container.getBoundingClientRect().top;
+    
+            if (containerTop < triggerBottom) {
+                container.classList.add("show");
+            } else {
+                container.classList.remove("show");
+            }
+        });
 
         if (textPosition < screenPosition) {
             text.classList.add("visible4");
@@ -41,21 +64,23 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // Fin del evento
 
-var scrollSpy = new bootstrap.ScrollSpy(document.body, {
-    target: '#simple-list-example'
-  });
-  document.querySelectorAll('#nav-tab>[data-bs-toggle="tab"]').forEach(el => {
-    el.addEventListener('shown.bs.tab', () => {
-      const target = el.getAttribute('data-bs-target')
-      const scrollElem = document.querySelector(`${target} [data-bs-spy="scroll"]`)
-      bootstrap.ScrollSpy.getOrCreateInstance(scrollElem).refresh()
-    })
-  })
-  document.addEventListener('DOMContentLoaded', function () {
-    const popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
-    const popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
-    return new bootstrap.Popover(popoverTriggerEl);
-        });
-    });
-    
+// var scrollSpy = new bootstrap.ScrollSpy(document.body, {
+//     target: '#simple-list-example'
+//   });
+//   document.querySelectorAll('#nav-tab>[data-bs-toggle="tab"]').forEach(el => {
+//     el.addEventListener('shown.bs.tab', () => {
+//       const target = el.getAttribute('data-bs-target')
+//       const scrollElem = document.querySelector(`${target} [data-bs-spy="scroll"]`)
+//       bootstrap.ScrollSpy.getOrCreateInstance(scrollElem).refresh()
+//     })
+//   })
+//   document.addEventListener('DOMContentLoaded', function () {
+//     const popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
+//     const popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+//     return new bootstrap.Popover(popoverTriggerEl);
+//         });
+//     });
+
+
+   
          

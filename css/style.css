@@ -134,20 +134,24 @@
     height: auto; /* Mantiene la proporción de la imagen */
 }
 .contenedor_historia{
-    font-size:2.5ch;
+    font-size:2.5ch; /* tamaño de la letra dentro de los tiempos */
+}
+.conoceme_historia{
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 .contenedor_historia_c {
     align-items: center;
 }
 .contenedor_habilidades{
     display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
+    text-align:center;
+    justify-content:center;
+    align-items:center;
     margin: 0 auto;
     max-width: 100%;
     padding-bottom: 100px;
-    
 }
 .habilidades_h1{
     text-align: center;
@@ -158,9 +162,10 @@
 }
 .scrollspy-example {
     position: relative;
+    width: 350px;
     height: 350px; /* Ajusta la altura según tus necesidades */
     overflow-y: scroll;
-    padding: 1rem;
+    padding: 3rem;
     border: 1px solid #ddd;
     background-color: #f8f9fa;
   }
@@ -216,3 +221,122 @@
   }
  
 
+
+  * {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Evita el desbordamiento horizontal */
+}
+
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 40px;
+}
+
+.container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+    opacity: 0; /* Inicialmente oculto */
+    transform: translateY(50px); /* Inicialmente desplazado */
+    transition: all 0.5s ease-out; /* Transición suave */
+}
+
+.left {
+    left: -100px;
+}
+
+.right {
+    left: 20%;
+}
+
+.content {
+    padding: 20px 30px;
+    background-color: #fcb077f2;
+    position: relative;
+    border-radius: 6px;
+    overflow: hidden; /* Asegura que el contenido no se desborde */
+}
+
+.left .content {
+    margin-left: 60px;
+}
+
+.right .content {
+    margin-right: 100px;
+    margin-left: 60px ;
+}
+
+.container::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -19px;
+    background-color: white;
+    border: 4px solid #FF9F55;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.left::after {
+    left: -16px;
+}
+
+.right::after {
+    left: -16px;
+}
+
+.container.show {
+    opacity: 1; /* Visible */
+    transform: translateY(0); /* Posición original */
+}
+
+.skills-section {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #fff;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 0px;
+}
+
+.skill {
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    padding: 20px;
+    width: 250px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.5s ease-out;
+}
+
+.skill h2 {
+    margin-top: 0;
+}
+
+.skill.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+.habilidades{
+        text-align: center;
+        margin-top: 100px;
+        margin-bottom: 50px;
+        font-family: 'Doto';
+        font-size: 90px;
+}
